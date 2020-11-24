@@ -3,6 +3,7 @@
   /* Color */
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-yellow: #ffca28;
   --color-primary: #424242;
   --color-primary-dark: #1b1b1b;
   --color-primary-light: #6d6d6d;
@@ -96,12 +97,13 @@ p {
   background-color: var(--color-primary);
   align-items: center;
   color: var(--color-white);
-  padding: 16px;
+  padding: 10px;
 }
 
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  margin: 0 4px;
 }
 
 .navbar__menu {
@@ -109,10 +111,12 @@ p {
 }
 
 .navbar__menu__item {
-  padding: 8px 12px;
+  padding: 5px 25px;
   margin: 0 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
 }
 
 /* Without active is better I think */
@@ -127,13 +131,14 @@ p {
 /* Home */
 #home {
   background: url('images/home/Sky.jpg') center/cover no-repeat; 
-  padding: 40px;
+  padding: 500px;
   text-align: center;
+  width: 100%;
 }
 
 .home__avatar {
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
 }
@@ -157,6 +162,10 @@ p {
 .section {
   padding: 50px;
   text-align: center;
+  margin: auto;
+}
+
+.section__container {
   max-width: 1200px;
   margin: auto;
 }
@@ -234,4 +243,57 @@ p {
 .job__period,
 .school__major {
   font-size: var(--font-small);
+}
+
+#skills {
+  background-color: var(--color-secondary-dark);
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  margin: 25px 0;
+}
+
+.skillset__title {
+  color: var(--color-white);
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-regular);
+  margin-bottom: 10px;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-secondary-dark);
+}
+
+.skill__value {
+  height: 5px;
+  background-color: var(--color-yellow);
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  padding: 20px 40px;
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.technologies,
+.tools {
+  padding: 5px;
 }
