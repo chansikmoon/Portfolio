@@ -128,17 +128,26 @@ p {
   background-color: var(--color-primary-light);
 }
 
+.navbar__toggle-btn {
+  position: absolute;
+  top: 15px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /* Home */
 #home {
   background: url('images/home/Sky.jpg') center/cover no-repeat; 
-  padding: 500px;
+  padding: 50px;
   text-align: center;
   width: 100%;
 }
 
 .home__avatar {
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
 }
@@ -306,6 +315,12 @@ p {
 }
 
 /* Work */
+.work__categories {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
 .category__btn {
   border: 1px solid var(--color-secondary-dark);
   border-radius: var(--size-border-radius);
@@ -342,3 +357,44 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
 }
+
+@media screen and (max-width: 800px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 38px;
+  }
+  
+  .skillset {
+    flex-direction:  column;
+  }
+
+  #work {
+    flex-direction: column;
+  }
+
+  .work__categories {
+    flex-direction: column;
+  }
+  .project {
+    flex-grow: 1;
+  }
+}
+
