@@ -204,28 +204,35 @@ p {
 
 .about__jobs,
 .about__university {
-  
 }
 
 .job,
 .school {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  /* align-items: center; */
   padding: 5px 0;
 }
 
 .job__logo,
 .school__logo {
   display: block;
+  max-width: 100%;
+  max-height: 100%;
   width: 250px;
   height: auto;
-  padding: 20px;
+  padding: 20px 10px;
 }
 
 .job_description,
 .school_description {
-  margin: 0 16px;
+  /* margin: 0 16px;*/
+  text-align: left; 
+  /* width: 45%; */
+  /* margin-left: 5%; */
   text-align: left;
+  margin: 10px 20px;
+  width: 260px;
 }
 
 .job__name,
@@ -296,4 +303,42 @@ p {
 .technologies,
 .tools {
   padding: 5px;
+}
+
+/* Work */
+.category__btn {
+  border: 1px solid var(--color-secondary-dark);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+}
+
+.category__btn:active,
+.category__btn:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white)
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-primary-dark);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 20px 0px;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
 }
