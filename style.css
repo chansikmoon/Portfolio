@@ -92,18 +92,25 @@ p {
 
 /* navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-primary);
+  background-color: transparent;
   align-items: center;
-  color: var(--color-white);
   padding: 10px;
+  transition: all var(--animation-duration) ease-in-out;
 }
 
+#navbar.navbar--dark {
+  background-color: var(--color-primary);
+  padding: 10px;
+}
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   margin: 0 4px;
+  color: var(--color-white);
 }
 
 .navbar__menu {
@@ -113,6 +120,7 @@ p {
 .navbar__menu__item {
   padding: 5px 25px;
   margin: 0 4px;
+  color: var(--color-white);
   cursor: pointer;
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
@@ -120,9 +128,10 @@ p {
 }
 
 /* Without active is better I think */
-/* .navbar__menu__item:active {
+.navbar__menu__item.active {
   border: 1px solid var(--color-white);
-} */
+  border-radius: var(--size-border-radius);
+}
 
 .navbar__menu__item:hover {
   background-color: var(--color-primary-light);
@@ -141,6 +150,7 @@ p {
 #home {
   background: url('images/home/Sky.jpg') center/cover no-repeat; 
   padding: 50px;
+  padding-top: 120px;
   text-align: center;
   width: 100%;
 }
