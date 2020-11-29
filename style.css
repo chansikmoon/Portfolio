@@ -223,7 +223,7 @@ p {
 .school {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   padding: 5px 0;
 }
 
@@ -239,10 +239,6 @@ p {
 
 .job_description,
 .school_description {
-  /* margin: 0 16px;*/
-  text-align: left; 
-  /* width: 45%; */
-  /* margin-left: 5%; */
   text-align: left;
   margin: 10px 20px;
   width: 260px;
@@ -419,6 +415,17 @@ p {
 
   .navbar__menu.open {
     display: block;
+  }
+
+  .home__avatar {
+    width: 230px;
+    height: 230px;
+  }
+
+  .home__title,
+  .home__description,
+  .home__contact {
+    transition: all var(--animation-duration) ease-in-out;
   }
 
   .section {
