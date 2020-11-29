@@ -361,6 +361,7 @@ p {
 /* Arrow Up */
 .arrow-up {
   position: fixed;
+  padding: 0px;
   bottom: 50px;
   right: 50px;
   width: 60px;
