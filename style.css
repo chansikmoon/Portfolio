@@ -137,8 +137,8 @@ p {
 
 .navbar__toggle-btn {
   position: absolute;
-  top: 15px;
-  right: 32px;
+  top: 10px;
+  right: 20px;
   font-size: 24px;
   color: var(--color-white);
   display: none;
@@ -384,9 +384,22 @@ p {
 }
 
 @media screen and (max-width: 800px) {
+  :root { 
+    /* Font Size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
+    top: 10px;
+    right: 10px;
+    font-size: var(--font-medium);
   }
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -396,6 +409,7 @@ p {
   #navbar.navbar--dark {
     padding: 10px;
   }
+
   .navbar__menu {
     flex-direction: column;
     text-align: center;
@@ -406,16 +420,47 @@ p {
   .navbar__menu.open {
     display: block;
   }
+
+  .section {
+    padding: 16px;
+    padding-top: 40px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
   
   .skillset {
     flex-direction:  column;
+  }
+
+  .skillset__left, 
+  .skillset__right { 
+    padding: 15px 20px;
+  }
+
+  .skill {
+    margin-bottom: 15px;
+  }
+
+  .skill__description { 
+    margin-bottom: 5px;
+  }
+
+  .job__logo { 
+    width: 120px;
+    padding: 15px 5px;
+  }
+
+  .school__logo {
+    width: 120px;
+    padding: 20px 5px;
   }
 
   #work {
@@ -425,8 +470,18 @@ p {
   .work__categories {
     flex-direction: column;
   }
+
   .project {
     flex-grow: 1;
+  }
+
+  .arrow-up { 
+    width: 50px;
+    height: 50px;
+    bottom: 16px;
+    right: 16px;
+    font-size: 30px;
+    line-height: 50px;
   }
 }
 
