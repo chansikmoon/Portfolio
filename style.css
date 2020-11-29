@@ -123,18 +123,15 @@ p {
   margin: 0 4px;
   color: var(--color-white);
   cursor: pointer;
+  border: 1px solid transparent;
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
 }
 
-/* Without active is better I think */
-.navbar__menu__item.active {
+.navbar__menu__item:hover {
   border: 1px solid var(--color-white);
   border-radius: var(--size-border-radius);
-}
-
-.navbar__menu__item:hover {
   background-color: var(--color-primary-light);
 }
 
@@ -220,10 +217,6 @@ p {
 .major__description {
   color: var(--color-primary-dark);
   font-size: var(--font-small);
-}
-
-.about__jobs,
-.about__university {
 }
 
 .job,
@@ -397,8 +390,12 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-primary);
   }
 
+  #navbar.navbar--dark {
+    padding: 10px;
+  }
   .navbar__menu {
     flex-direction: column;
     text-align: center;
@@ -406,6 +403,9 @@ p {
     display: none;
   }
 
+  .navbar__menu.open {
+    display: block;
+  }
   .about__majors {
     flex-direction: column;
   }

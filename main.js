@@ -12,6 +12,13 @@ document.addEventListener('scroll', () => {
   }
 });
 
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+  console.log('click');
+  navbarMenu.classList.toggle('open');
+});
+
 // Handle scrolling when clicking the navbar menu item
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
@@ -20,9 +27,11 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollIntoView(link)
 });
 
+// Navbar toggle button for small screen
 const homeContactMeBtn = document.querySelector('.home__contact');
 homeContactMeBtn.addEventListener('click', (event) => {
   scrollIntoView('#contact')
